@@ -63,7 +63,7 @@ class MathProblem {
         
         if !wantAccurateResult {
             // Create a random result
-            let range = firstOperand + secondOperand + result
+            let range = [firstOperand, secondOperand, result].reduce(Int.min, combine: { max($0, $1) })
             var ranges = (1...range).map({$0}).filter({$0 != result})
             ranges.shuffle()
             result = ranges.first!
