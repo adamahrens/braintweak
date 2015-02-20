@@ -48,6 +48,10 @@
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdI-ej-Af9">
                                                     <rect key="frame" x="-17" y="-21" width="600" height="162"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="cdT-MY-riT" id="aUa-MC-6kY"/>
+                                                        <outlet property="delegate" destination="cdT-MY-riT" id="lyx-Cl-PCg"/>
+                                                    </connections>
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
