@@ -12,6 +12,10 @@
 		430F727A1A978A5900E17880 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430F72791A978A5900E17880 /* Images.xcassets */; };
 		430F727D1A978A5900E17880 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430F727B1A978A5900E17880 /* LaunchScreen.xib */; };
 		430F72891A978A5900E17880 /* BrainTweakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72881A978A5900E17880 /* BrainTweakTests.swift */; };
+		430F72941A978C3800E17880 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72931A978C3800E17880 /* GameBrain.swift */; };
+		430F72961A978DA200E17880 /* MathProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72951A978DA200E17880 /* MathProblem.swift */; };
+		430F72971A979AA800E17880 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72931A978C3800E17880 /* GameBrain.swift */; };
+		430F72981A979AA800E17880 /* MathProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72951A978DA200E17880 /* MathProblem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 		430F72821A978A5900E17880 /* BrainTweakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainTweakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		430F72871A978A5900E17880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430F72881A978A5900E17880 /* BrainTweakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTweakTests.swift; sourceTree = "<group>"; };
+		430F72931A978C3800E17880 /* GameBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBrain.swift; path = Model/GameBrain.swift; sourceTree = "<group>"; };
+		430F72951A978DA200E17880 /* MathProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathProblem.swift; path = Model/MathProblem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 		430F726F1A978A5900E17880 /* BrainTweak */ = {
 			isa = PBXGroup;
 			children = (
+				430F72921A978C1E00E17880 /* Model */,
 				430F72721A978A5900E17880 /* AppDelegate.swift */,
 				430F72761A978A5900E17880 /* Main.storyboard */,
 				430F72791A978A5900E17880 /* Images.xcassets */,
@@ -107,6 +114,15 @@
 				430F72871A978A5900E17880 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		430F72921A978C1E00E17880 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				430F72931A978C3800E17880 /* GameBrain.swift */,
+				430F72951A978DA200E17880 /* MathProblem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F72941A978C3800E17880 /* GameBrain.swift in Sources */,
+				430F72961A978DA200E17880 /* MathProblem.swift in Sources */,
 				430F72731A978A5900E17880 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F72971A979AA800E17880 /* GameBrain.swift in Sources */,
+				430F72981A979AA800E17880 /* MathProblem.swift in Sources */,
 				430F72891A978A5900E17880 /* BrainTweakTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
