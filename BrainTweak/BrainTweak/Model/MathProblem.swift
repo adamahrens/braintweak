@@ -22,10 +22,10 @@ enum Operator: Printable {
 }
 
 class MathProblem {
-    // Default values
-    let firstOperand: Int = 1
-    let secondOperand: Int = 2
-    let operation = Operator.Plus
+    // ivars
+    let firstOperand: Int
+    let secondOperand: Int
+    let operation: Operator
     
     init(first: Int, second: Int, operation: Operator) {
         firstOperand = first
@@ -33,17 +33,40 @@ class MathProblem {
         self.operation = operation
     }
     
+    // Displays a math problem correctly
+    // e.g. 1 + 2 = 3
     func correctDisplay() -> String {
-        return "\(firstOperand) \(operation.description) \(secondOperand) = \(computeTheResult())"
+        return displayResult(true)
     }
     
-    func computeTheResult() -> String {
+    // Displays a math problem incorrectly
+    // e.g. 1 + 2 = 6
+    func incorrectDisplay() -> String {
+        return displayResult(false)
+    }
+    
+    private func displayResult(wantAccurateResult: Bool) -> String {
+        return "\(firstOperand) \(operation.description) \(secondOperand) = \(computeTheResult(wantAccurateResult))"
+    }
+    
+    // Takes the two operands and performs the operation
+    // Can decide if we want the result of the operation
+    // To be accurate or not
+    private func computeTheResult(wantAccurateResult: Bool) -> String {
         var result = 0;
         switch operation {
             case .Plus : result = performOperation({$0 + $1})
             case .Subtract : result = performOperation({$0 - $1})
             case .Divide : result = performOperation({$0 / $1})
             case .Multiply : result = performOperation({$0 * $1})
+        }
+        
+        if !wantAccurateResult {
+            // Create a random result
+            let range = firstOperand + secondOperand + result
+            var ranges = (1...range).map({$0}).filter({$0 != result})
+            ranges.shuffle()
+            result = ranges.first!
         }
         
         return "\(result)"

@@ -16,6 +16,14 @@
 		430F72961A978DA200E17880 /* MathProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72951A978DA200E17880 /* MathProblem.swift */; };
 		430F72971A979AA800E17880 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72931A978C3800E17880 /* GameBrain.swift */; };
 		430F72981A979AA800E17880 /* MathProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72951A978DA200E17880 /* MathProblem.swift */; };
+		430F72A71A97C4B600E17880 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72A61A97C4B600E17880 /* ArrayExtension.swift */; };
+		430F72AF1A97C71400E17880 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72AE1A97C71400E17880 /* ScoreKeeper.swift */; };
+		430F72B01A97C71400E17880 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72AE1A97C71400E17880 /* ScoreKeeper.swift */; };
+		430F72B31A97C8AB00E17880 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72B21A97C8AB00E17880 /* MainViewController.swift */; };
+		430F72B41A97C8AB00E17880 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72B21A97C8AB00E17880 /* MainViewController.swift */; };
+		430F72B61A97C8C000E17880 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72B51A97C8C000E17880 /* GameViewController.swift */; };
+		430F72B71A97C8C000E17880 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72B51A97C8C000E17880 /* GameViewController.swift */; };
+		430F72B81A97C99C00E17880 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F72A61A97C4B600E17880 /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,10 @@
 		430F72881A978A5900E17880 /* BrainTweakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTweakTests.swift; sourceTree = "<group>"; };
 		430F72931A978C3800E17880 /* GameBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameBrain.swift; path = Model/GameBrain.swift; sourceTree = "<group>"; };
 		430F72951A978DA200E17880 /* MathProblem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathProblem.swift; path = Model/MathProblem.swift; sourceTree = "<group>"; };
+		430F72A61A97C4B600E17880 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
+		430F72AE1A97C71400E17880 /* ScoreKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreKeeper.swift; path = Model/ScoreKeeper.swift; sourceTree = "<group>"; };
+		430F72B21A97C8AB00E17880 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		430F72B51A97C8C000E17880 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ViewControllers/GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +93,11 @@
 		430F726F1A978A5900E17880 /* BrainTweak */ = {
 			isa = PBXGroup;
 			children = (
+				430F72B11A97C88500E17880 /* ViewControllers */,
+				430F72A51A97C49C00E17880 /* Extensions */,
 				430F72921A978C1E00E17880 /* Model */,
 				430F72721A978A5900E17880 /* AppDelegate.swift */,
-				430F72761A978A5900E17880 /* Main.storyboard */,
 				430F72791A978A5900E17880 /* Images.xcassets */,
-				430F727B1A978A5900E17880 /* LaunchScreen.xib */,
 				430F72701A978A5900E17880 /* Supporting Files */,
 			);
 			path = BrainTweak;
@@ -94,6 +106,8 @@
 		430F72701A978A5900E17880 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				430F72761A978A5900E17880 /* Main.storyboard */,
+				430F727B1A978A5900E17880 /* LaunchScreen.xib */,
 				430F72711A978A5900E17880 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -121,8 +135,26 @@
 			children = (
 				430F72931A978C3800E17880 /* GameBrain.swift */,
 				430F72951A978DA200E17880 /* MathProblem.swift */,
+				430F72AE1A97C71400E17880 /* ScoreKeeper.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		430F72A51A97C49C00E17880 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				430F72A61A97C4B600E17880 /* ArrayExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		430F72B11A97C88500E17880 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				430F72B21A97C8AB00E17880 /* MainViewController.swift */,
+				430F72B51A97C8C000E17880 /* GameViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F72B61A97C8C000E17880 /* GameViewController.swift in Sources */,
 				430F72941A978C3800E17880 /* GameBrain.swift in Sources */,
+				430F72AF1A97C71400E17880 /* ScoreKeeper.swift in Sources */,
 				430F72961A978DA200E17880 /* MathProblem.swift in Sources */,
+				430F72B31A97C8AB00E17880 /* MainViewController.swift in Sources */,
 				430F72731A978A5900E17880 /* AppDelegate.swift in Sources */,
+				430F72A71A97C4B600E17880 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F72B81A97C99C00E17880 /* ArrayExtension.swift in Sources */,
+				430F72B01A97C71400E17880 /* ScoreKeeper.swift in Sources */,
 				430F72971A979AA800E17880 /* GameBrain.swift in Sources */,
 				430F72981A979AA800E17880 /* MathProblem.swift in Sources */,
 				430F72891A978A5900E17880 /* BrainTweakTests.swift in Sources */,
+				430F72B71A97C8C000E17880 /* GameViewController.swift in Sources */,
+				430F72B41A97C8AB00E17880 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

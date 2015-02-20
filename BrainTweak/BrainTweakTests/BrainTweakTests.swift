@@ -46,4 +46,16 @@ class BrainTweakTests: XCTestCase {
         XCTAssertEqual("11 ÷ 1 = 11", oneMoreDivision.correctDisplay(), "Should have the correct display")
     }
     
+    func testAdditionMathProblemIncorrectDisplay() {
+        let addition = MathProblem(first: 1, second: 2, operation: .Plus)
+        let incorrect = addition.incorrectDisplay()
+        println("\(incorrect)")
+        XCTAssertNotEqual("1 + 2 = 3", incorrect, "Should have the correct display")
+        
+        let anotherAddition = MathProblem(first: 9, second: 2, operation: .Plus)
+        let anotherIncorrect = anotherAddition.incorrectDisplay()
+        println("\(anotherIncorrect)")
+        XCTAssertNotEqual("9 + 2 = 11", anotherIncorrect, "Should have the correct display")
+    }
+    
 }
