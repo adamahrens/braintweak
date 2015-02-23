@@ -71,13 +71,23 @@ class GameViewController: UIViewController, UITableViewDataSource {
             usersAnswerIsCorrect = "true"
         }
         
+        // Update score
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: scoreKeeper!.scoreDisplay(), style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        
         answeredQuestions[currentMathProblem] = usersAnswerIsCorrect
         currentMathProblem++
+        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: currentMathProblem - 1, inSection: 0)], withRowAnimation: .Automatic)
+        
+        // Answered all the questions. Remove the buttons
         if currentMathProblem == gameBrain!.size() {
             disableButtons()
         }
         
-        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: currentMathProblem - 1, inSection: 0)], withRowAnimation: .Automatic)
+        // Scroll the answered problem off screen so the User can
+        // focus on the next
+        if currentMathProblem != gameBrain!.size() {
+            tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: currentMathProblem, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+        }
     }
     
     private func disableButtons() {

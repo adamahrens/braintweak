@@ -29,4 +29,8 @@ class ScoreKeeper {
     func score() -> Double {
         return correctlyAnswered / maxScore
     }
+    
+    func scoreDisplay() -> String {
+        return "\(Int(correctlyAnswered)) of \(Int(maxScore))"
+    }
 }
