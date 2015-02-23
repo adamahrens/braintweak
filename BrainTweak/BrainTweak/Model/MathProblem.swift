@@ -23,9 +23,9 @@ enum Operator: Printable {
 
 class MathProblem {
     // ivars
-    let firstOperand: Int
-    let secondOperand: Int
-    let operation: Operator
+    private let firstOperand: Int
+    private let secondOperand: Int
+    private let operation: Operator
     
     init(first: Int, second: Int, operation: Operator) {
         firstOperand = first

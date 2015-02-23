@@ -10,10 +10,10 @@ import Foundation
 
 class ScoreKeeper {
     // Max score
-    let maxScore: Double
+    private let maxScore: Double
     
     // How many answered correctly
-    var correctlyAnswered = 0.0
+    private var correctlyAnswered = 0.0
     
     init(maxScore: Double) {
         assert(maxScore >= 1.0, "Have to have number greater than or equal to 1")

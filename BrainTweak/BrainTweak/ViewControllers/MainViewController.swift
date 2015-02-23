@@ -10,7 +10,15 @@ import UIKit
 
 //MARK: MainViewController
 class MainViewController: UITableViewController {
-
+    
+    @IBOutlet weak var numberOfQuestionsPicker: UIPickerView!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier! == "GameSegue" {
+            let gameViewController = segue.destinationViewController as GameViewController
+            gameViewController.gameBrain = GameBrain(difficulty: .Easy, numberOfProblems: self.numberOfQuestions[numberOfQuestionsPicker.selectedRowInComponent(0)])
+        }
+    }
 }
 
 //MARK: UIPickerView Extension
