@@ -10,4 +10,10 @@ import UIKit
 
 class MathCell: UITableViewCell {
     @IBOutlet weak var mathProblem: UILabel!
+    
+    override func prepareForReuse() {
+        self.backgroundColor = UIColor.whiteColor()
+        self.contentView.backgroundColor = UIColor.whiteColor()
+        mathProblem.backgroundColor = UIColor.whiteColor()
+    }
 }
