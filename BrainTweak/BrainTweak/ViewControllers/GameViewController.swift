@@ -86,8 +86,8 @@ class GameViewController: UIViewController, UITableViewDataSource {
         
         UIView.animateWithDuration(0.35, animations: {
             self.tableViewBottomSpace.constant = 0
-            correctButton.hidden = true
-            incorrectButton.hidden = true
+            self.correctButton.hidden = true
+            self.incorrectButton.hidden = true
             self.view.layoutIfNeeded()
         })
     }
