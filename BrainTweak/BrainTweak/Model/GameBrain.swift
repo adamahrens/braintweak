@@ -19,11 +19,18 @@ class GameBrain {
     // Create a game of difficulty and number of problems
     // TODO: Need to utilize the difficulty parameter
     init(difficulty: Difficulty, numberOfProblems: Int) {
+        var maxNumber = 9
+        if difficulty == .Medium {
+            maxNumber = 20
+        } else if difficulty == .Hard {
+            maxNumber = 101
+        }
+        
         var problems = [MathProblem]()
         for _ in 1...numberOfProblems {
             // Get two numbers between 1 and 10 (exclusive)
-            let first = Int(arc4random_uniform(9) + 1)
-            let second = Int(arc4random_uniform(9) + 1)
+            let first = Int(arc4random_uniform(UInt32(maxNumber)) + 1)
+            let second = Int(arc4random_uniform(UInt32(maxNumber)) + 1)
             let problem = MathProblem(first: first, second: second, operation: .Plus)
             problems.append(problem)
         }

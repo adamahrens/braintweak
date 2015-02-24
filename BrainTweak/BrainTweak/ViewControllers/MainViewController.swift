@@ -12,11 +12,42 @@ import UIKit
 class MainViewController: UITableViewController {
     
     @IBOutlet weak var numberOfQuestionsPicker: UIPickerView!
+    @IBOutlet weak var easyLabel: UILabel!
+    @IBOutlet weak var mediumLabel: UILabel!
+    @IBOutlet weak var difficultLabel: UILabel!
+    
+    var difficultyLabels : [UILabel] {
+        get {
+            return [easyLabel, mediumLabel, difficultLabel]
+        }
+    }
+    
+    var selectedDifficulty: Difficulty = .Easy
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier! == "GameSegue" {
             let gameViewController = segue.destinationViewController as GameViewController
-            gameViewController.gameBrain = GameBrain(difficulty: .Easy, numberOfProblems: self.numberOfQuestions[numberOfQuestionsPicker.selectedRowInComponent(0)])
+            gameViewController.gameBrain = GameBrain(difficulty: selectedDifficulty, numberOfProblems: self.numberOfQuestions[numberOfQuestionsPicker.selectedRowInComponent(0)])
+        }
+    }
+    
+    @IBAction func tappedDifficulty(sender: UITapGestureRecognizer) {
+        // Only allow one difficulty to be selected
+        for label in difficultyLabels {
+            if label == sender.view {
+                label.textColor = UIColor.whiteColor()
+                label.backgroundColor = UIColor(red: 229.0/255.0, green: 88.0/255.0, blue: 145.0/255.0, alpha: 1)
+                if sender.view == easyLabel {
+                    selectedDifficulty = .Easy
+                } else if sender.view == mediumLabel {
+                    selectedDifficulty = .Medium
+                } else {
+                    selectedDifficulty = .Hard
+                }
+            } else {
+                label.textColor = UIColor.blackColor()
+                label.backgroundColor = UIColor.whiteColor()
+            }
         }
     }
 }
