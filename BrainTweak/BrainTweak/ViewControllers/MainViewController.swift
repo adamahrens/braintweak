@@ -26,7 +26,7 @@ class MainViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier! == "GameSegue" {
-            let gameViewController = segue.destinationViewController as GameViewController
+            let gameViewController = segue.destinationViewController as! GameViewController
             gameViewController.gameBrain = GameBrain(difficulty: selectedDifficulty, numberOfProblems: self.numberOfQuestions[numberOfQuestionsPicker.selectedRowInComponent(0)])
         }
     }

@@ -35,7 +35,7 @@ class GameViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MathCell", forIndexPath: indexPath) as MathCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MathCell", forIndexPath: indexPath) as! MathCell
         cell.mathProblem.text = gameBrain!.mathProblemDisplay(indexPath.row)
         
         if (answeredQuestions[indexPath.row] != nil) {
