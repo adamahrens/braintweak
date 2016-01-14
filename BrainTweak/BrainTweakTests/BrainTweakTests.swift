@@ -49,12 +49,12 @@ class BrainTweakTests: XCTestCase {
     func testAdditionMathProblemIncorrectDisplay() {
         let addition = MathProblem(first: 1, second: 2, operation: .Plus)
         let incorrect = addition.incorrectDisplay()
-        println("\(incorrect)")
+        print("\(incorrect)")
         XCTAssertNotEqual("1 + 2 = 3", incorrect, "Should have the correct display")
         
         let anotherAddition = MathProblem(first: 9, second: 2, operation: .Plus)
         let anotherIncorrect = anotherAddition.incorrectDisplay()
-        println("\(anotherIncorrect)")
+        print("\(anotherIncorrect)")
         XCTAssertNotEqual("9 + 2 = 11", anotherIncorrect, "Should have the correct display")
     }
     
