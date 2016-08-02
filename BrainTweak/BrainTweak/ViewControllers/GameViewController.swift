@@ -75,7 +75,7 @@ class GameViewController: UIViewController, UITableViewDataSource {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: scoreKeeper!.scoreDisplay(), style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         
         answeredQuestions[currentMathProblem] = usersAnswerIsCorrect
-        currentMathProblem++
+        currentMathProblem += 1
         tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: currentMathProblem - 1, inSection: 0)], withRowAnimation: .Automatic)
         
         // Answered all the questions. Remove the buttons
